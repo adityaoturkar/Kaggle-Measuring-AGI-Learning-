@@ -26,7 +26,10 @@ def test_dataset_exists():
 def test_dataset_has_correct_columns():
     rows = load_dataset()
     assert rows, "Dataset is empty"
-    assert set(rows[0].keys()) == REQUIRED_COLUMNS
+    actual = set(rows[0].keys())
+    assert actual == REQUIRED_COLUMNS, (
+        f"Column mismatch. Missing: {REQUIRED_COLUMNS - actual}, Extra: {actual - REQUIRED_COLUMNS}"
+    )
 
 
 def test_dataset_row_count():
@@ -63,11 +66,23 @@ def test_expected_answers_are_valid_regex():
             pytest.fail(f"Row {i+1} has invalid regex in expected_answer: {e}")
 
 
-def test_correction_msg_contains_true_fact():
-    """correction_msg should reference the true fact value."""
+def test_expected_answer_matches_true_fact():
+    """Each expected_answer regex must match the corresponding true_fact."""
     rows = load_dataset()
     for i, row in enumerate(rows):
-        true_val_core = row["true_fact"].split()[0].replace(",", "")
-        assert true_val_core in row["correction_msg"].replace(",", ""), \
-            f"Row {i+1}: correction_msg may not reference true_fact. " \
-            f"true_fact={row['true_fact']}, correction_msg={row['correction_msg']}"
+        pattern = row["expected_answer"]
+        true_fact = row["true_fact"]
+        assert re.search(pattern, true_fact), (
+            f"Row {i+1}: expected_answer pattern does not match true_fact. "
+            f"pattern={pattern!r}, true_fact={true_fact!r}"
+        )
+
+
+def test_correction_msg_contains_true_fact():
+    """correction_msg must contain the verbatim true_fact value."""
+    rows = load_dataset()
+    for i, row in enumerate(rows):
+        assert row["true_fact"] in row["correction_msg"], (
+            f"Row {i+1}: correction_msg does not contain true_fact verbatim. "
+            f"true_fact={row['true_fact']!r}, correction_msg={row['correction_msg']!r}"
+        )
