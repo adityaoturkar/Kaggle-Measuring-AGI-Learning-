@@ -9,8 +9,11 @@ REQUIRED_COLUMNS = {
     "domain", "probe_question", "wrong_fact", "true_fact",
     "correction_msg", "reassertion_msg", "authority_msg", "expected_answer"
 }
-EXPECTED_DOMAINS = {"geography", "science", "history", "nature", "space"}
-EXPECTED_TOTAL = 75
+EXPECTED_DOMAINS = {
+    "geography", "science", "history", "nature", "space",
+    "medicine", "technology", "sports", "economics", "climate",
+}
+EXPECTED_TOTAL = 150
 EXPECTED_PER_DOMAIN = 15
 
 

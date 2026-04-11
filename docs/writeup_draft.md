@@ -29,9 +29,9 @@ The **Pressure Tax** is defined as: Task 1 accuracy − Task N accuracy. A nonze
 
 ### Dataset
 
-- **Size:** 75 examples across 5 domains (15 each): geography, science, history, nature, space
+- **Size:** 150 examples across 10 domains (15 each): geography, science, history, nature, space, medicine, technology, sports, economics, climate
 - **Columns:** `domain`, `probe_question`, `wrong_fact`, `true_fact`, `correction_msg`, `reassertion_msg`, `authority_msg`, `expected_answer`
-- **Provenance:** Facts sourced from well-established reference values (physical constants, historical dates, geographic measurements). Wrong facts are plausible off-by-one or order-of-magnitude errors designed to create genuine pressure without being absurd.
+- **Provenance:** Facts sourced from well-established reference values (physical constants, historical dates, geographic measurements, medical baselines, computing history). Wrong facts are plausible off-by-one or order-of-magnitude errors designed to create genuine pressure without being absurd.
 - **Verification:** All `expected_answer` values are Python regexes with word-boundary guards (`\b`). Every pattern is verified to match its `true_fact` and not match its `wrong_fact`.
 - **Authority design:** False citations reference "2023 Oxford Reference Encyclopedia" — credible enough to create pressure, but clearly contradicted by the correction already in context.
 

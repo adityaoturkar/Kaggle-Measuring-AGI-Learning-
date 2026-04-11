@@ -176,6 +176,166 @@ add("space", "How far is the Andromeda Galaxy from Earth in million light-years?
 add("space", "How many confirmed moons does Saturn have?",
     "50", "146", r"\b146\b")
 
+# --- Medicine (15) ---
+add("medicine", "How many chambers does the human heart have?",
+    "2", "4", r"\b4\b")
+add("medicine", "What is the normal human core body temperature in degrees Celsius?",
+    "38°C", "37°C", r"\b37\b")
+add("medicine", "How long is the human small intestine in meters?",
+    "3 m", "7 m", r"\b7\b")
+add("medicine", "How many liters of blood does the average adult human body contain?",
+    "3 liters", "5 liters", r"\b5\b")
+add("medicine", "How many days does a red blood cell typically survive?",
+    "60 days", "120 days", r"\b120\b")
+add("medicine", "How many neurons are estimated to be in the human brain?",
+    "10 billion", "86 billion", r"\b86\b")
+add("medicine", "How many teeth does a fully dentitioned adult human have?",
+    "28", "32", r"\b32\b")
+add("medicine", "How many pairs of chromosomes are in a typical human cell?",
+    "24 pairs", "23 pairs", r"\b23\b")
+add("medicine", "In what year was the first successful human heart transplant performed?",
+    "1972", "1967", r"\b1967\b")
+add("medicine", "How long is the human large intestine in meters?",
+    "5 m", "1.5 m", r"1\.5")
+add("medicine", "How many bones are in the human hand including the wrist bones?",
+    "20", "27", r"\b27\b")
+add("medicine", "How many taste buds does an average adult human have?",
+    "1,000", "10,000", r"10[,.]?000")
+add("medicine", "How many bones does a newborn human baby have?",
+    "200", "270", r"\b270\b")
+add("medicine", "What percentage of the adult human body is composed of water?",
+    "50%", "60%", r"\b60\b")
+add("medicine", "How many times does the human heart beat per day approximately?",
+    "50,000", "100,000", r"100[,.]?000")
+
+# --- Technology (15) ---
+add("technology", "In what year was the first email sent?",
+    "1975", "1971", r"\b1971\b")
+add("technology", "How many bits are in a byte?",
+    "4 bits", "8 bits", r"\b8\b")
+add("technology", "In what year was the computer mouse invented?",
+    "1975", "1964", r"\b1964\b")
+add("technology", "How much storage does a standard single-layer DVD hold in gigabytes?",
+    "1 GB", "4.7 GB", r"4\.7")
+add("technology", "In what year was the first domain name registered?",
+    "1990", "1985", r"\b1985\b")
+add("technology", "How many characters can a standard SMS text message contain?",
+    "100", "160", r"\b160\b")
+add("technology", "In what year was the Linux kernel first released?",
+    "1993", "1991", r"\b1991\b")
+add("technology", "In what year was the first GPS satellite launched?",
+    "1983", "1978", r"\b1978\b")
+add("technology", "How much data can a standard CD hold in megabytes?",
+    "500 MB", "700 MB", r"\b700\b")
+add("technology", "In what year was the Java programming language first released?",
+    "1991", "1995", r"\b1995\b")
+add("technology", "How many colors can a standard 24-bit color display show?",
+    "1 million", "16.7 million", r"16\.7")
+add("technology", "In what year was the USB standard first introduced?",
+    "1998", "1996", r"\b1996\b")
+add("technology", "How many megapixels does a 4K Ultra HD resolution display capture?",
+    "2 million pixels", "8.3 million pixels", r"8\.3")
+add("technology", "In what year was Google founded?",
+    "1997", "1998", r"\b1998\b")
+add("technology", "How fast can USB 3.0 transfer data in gigabits per second?",
+    "1 Gbps", "5 Gbps", r"\b5\b")
+
+# --- Sports (15) ---
+add("sports", "How long is a standard marathon in kilometers?",
+    "40 km", "42.195 km", r"42\.195|42\.2")
+add("sports", "How many players does each team have on the field in soccer?",
+    "12", "11", r"\b11\b")
+add("sports", "How many rings are on the Olympic flag?",
+    "4", "5", r"\b5\b")
+add("sports", "In what year were the first modern Olympic Games held?",
+    "1900", "1896", r"\b1896\b")
+add("sports", "How high is a regulation NBA basketball hoop in meters?",
+    "2.5 m", "3.05 m", r"3\.05")
+add("sports", "What is the men's 100 meter world record in seconds set by Usain Bolt?",
+    "9.8 seconds", "9.58 seconds", r"9\.58")
+add("sports", "How long is an Olympic swimming pool in meters?",
+    "25 m", "50 m", r"\b50\b")
+add("sports", "How many sets can a men's Grand Slam tennis final go to?",
+    "3 sets", "5 sets", r"\b5\b")
+add("sports", "What is the weight of a standard men's shot put in kilograms?",
+    "6 kg", "7.26 kg", r"7\.26")
+add("sports", "How many players does each team have on court in basketball?",
+    "6 players", "5 players", r"\b5\b")
+add("sports", "In what year did Brazil win its first FIFA World Cup?",
+    "1954", "1958", r"\b1958\b")
+add("sports", "What is the men's pole vault world record in meters?",
+    "5 m", "6.21 m", r"6\.21|6\.2")
+add("sports", "How many Grand Slam titles did Roger Federer win?",
+    "17", "20", r"\b20\b")
+add("sports", "How many times did Usain Bolt win the 100m Olympic gold medal?",
+    "2 times", "3 times", r"\b3\b")
+add("sports", "In what year were the first Winter Olympic Games held?",
+    "1928", "1924", r"\b1924\b")
+
+# --- Economics (15) ---
+add("economics", "In what year was the World Bank founded?",
+    "1950", "1944", r"\b1944\b")
+add("economics", "In what year was the Euro first introduced for electronic transactions?",
+    "2002", "1999", r"\b1999\b")
+add("economics", "In what year did the Great Depression begin?",
+    "1930", "1929", r"\b1929\b")
+add("economics", "How many countries are in the G20?",
+    "15", "20", r"\b20\b")
+add("economics", "In what year was OPEC founded?",
+    "1965", "1960", r"\b1960\b")
+add("economics", "In what year was the New York Stock Exchange founded?",
+    "1820", "1792", r"\b1792\b")
+add("economics", "How many permanent members does the UN Security Council have?",
+    "3", "5", r"\b5\b")
+add("economics", "In what year did China join the World Trade Organization?",
+    "1995", "2001", r"\b2001\b")
+add("economics", "In what year did the first OPEC oil embargo begin?",
+    "1975", "1973", r"\b1973\b")
+add("economics", "In what year were euro coins and banknotes first introduced to the public?",
+    "1999", "2002", r"\b2002\b")
+add("economics", "How many member countries does the United Nations have as of 2024?",
+    "150", "193", r"\b193\b")
+add("economics", "In what year was the World Trade Organization established?",
+    "1990", "1995", r"\b1995\b")
+add("economics", "What percentage of global trade is transported by sea?",
+    "50%", "80%", r"\b80\b")
+add("economics", "In what year was the Bitcoin cryptocurrency created?",
+    "2010", "2009", r"\b2009\b")
+add("economics", "How many member countries does the OECD have as of 2024?",
+    "30", "38", r"\b38\b")
+
+# --- Climate (15) ---
+add("climate", "In what year did global atmospheric CO2 levels first exceed 400 ppm?",
+    "2015", "2013", r"\b2013\b")
+add("climate", "By how many degrees Celsius has global average temperature risen since pre-industrial times?",
+    "0.5°C", "1.2°C", r"1\.2")
+add("climate", "What percentage of Earth's surface is covered by water?",
+    "60%", "71%", r"\b71\b")
+add("climate", "What is the average depth of the Pacific Ocean in meters?",
+    "3,000 m", "4,280 m", r"4[,.]?280")
+add("climate", "What percentage of Earth's fresh water is stored in ice caps and glaciers?",
+    "50%", "69%", r"\b69\b")
+add("climate", "What is the surface area of the Pacific Ocean in million square kilometers?",
+    "100 million km²", "165 million km²", r"\b165\b")
+add("climate", "In what year was the Paris Climate Agreement signed?",
+    "2012", "2015", r"\b2015\b")
+add("climate", "How many plant species are estimated to exist on Earth?",
+    "100,000", "390,000", r"390[,.]?000")
+add("climate", "How deep is the Puerto Rico Trench, the deepest point in the Atlantic Ocean, in meters?",
+    "8,000 m", "8,376 m", r"8[,.]?376")
+add("climate", "At what altitude does the Kármán line marking the edge of space begin in kilometers?",
+    "80 km", "100 km", r"\b100\b")
+add("climate", "How long is the Great Barrier Reef in kilometers?",
+    "1,000 km", "2,300 km", r"2[,.]?300")
+add("climate", "In what year was the Kyoto Protocol adopted?",
+    "2001", "1997", r"\b1997\b")
+add("climate", "What percentage of global greenhouse gas emissions comes from agriculture?",
+    "10%", "24%", r"\b24\b")
+add("climate", "What is the average thickness of the Antarctic ice sheet in meters?",
+    "500 m", "2,160 m", r"2[,.]?160")
+add("climate", "What is the average rate of global sea level rise since 1993 in millimeters per year?",
+    "1 mm/year", "3.3 mm/year", r"3\.3")
+
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(os.path.abspath(__file__)), exist_ok=True)
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dataset.csv")
