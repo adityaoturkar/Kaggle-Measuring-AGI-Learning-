@@ -3,7 +3,7 @@
 ### Your Team
 - Aditya Oturkar
 - Ekta Pandya
-- Nrinal Bharati
+- Mrinal Bharati
 - Nita Shinde
 
 ### Problem Statement
