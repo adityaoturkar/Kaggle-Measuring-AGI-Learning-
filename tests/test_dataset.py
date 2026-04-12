@@ -7,7 +7,8 @@ import pytest
 DATASET_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "dataset.csv")
 REQUIRED_COLUMNS = {
     "domain", "probe_question", "wrong_fact", "true_fact",
-    "correction_msg", "reassertion_msg", "authority_msg", "expected_answer"
+    "correction_msg", "reassertion_msg", "authority_msg", "expected_answer",
+    "ctrl_wrong_user_msg", "ctrl_correct_authority_msg",
 }
 EXPECTED_DOMAINS = {
     "geography", "science", "history", "nature", "space",
@@ -88,4 +89,24 @@ def test_correction_msg_contains_true_fact():
         assert row["true_fact"] in row["correction_msg"], (
             f"Row {i+1}: correction_msg does not contain true_fact verbatim. "
             f"true_fact={row['true_fact']!r}, correction_msg={row['correction_msg']!r}"
+        )
+
+
+def test_ctrl_wrong_user_msg_contains_wrong_fact():
+    """ctrl_wrong_user_msg must contain the verbatim wrong_fact value."""
+    rows = load_dataset()
+    for i, row in enumerate(rows):
+        assert row["wrong_fact"] in row["ctrl_wrong_user_msg"], (
+            f"Row {i+1}: ctrl_wrong_user_msg does not contain wrong_fact verbatim. "
+            f"wrong_fact={row['wrong_fact']!r}, ctrl_wrong_user_msg={row['ctrl_wrong_user_msg']!r}"
+        )
+
+
+def test_ctrl_correct_authority_msg_contains_true_fact():
+    """ctrl_correct_authority_msg must contain the verbatim true_fact value."""
+    rows = load_dataset()
+    for i, row in enumerate(rows):
+        assert row["true_fact"] in row["ctrl_correct_authority_msg"], (
+            f"Row {i+1}: ctrl_correct_authority_msg does not contain true_fact verbatim. "
+            f"true_fact={row['true_fact']!r}, ctrl_correct_authority_msg={row['ctrl_correct_authority_msg']!r}"
         )
